@@ -6,7 +6,7 @@
     "color_body_text": "#000",
     "social_sharing_blog": true,
     "share_facebook": true,
-    "share_twitter": true,
+    "share_twitter": false,
     "share_pinterest": true,
     "social_twitter_link": "#",
     "social_facebook_link": "#",
