@@ -94,7 +94,9 @@
             {% endfor %}
           </tbody>
         </table>
-        
+        <div class="continue-shopping-wrapper"> 
+          <a href="/collections/all" class="btn continue-shopping" title="Continue shopping">Continue shopping</a>
+        </div>
         <div class="cart-summary">
           {% comment %}
           {% if settings.cart_notes_enable %}
@@ -112,6 +114,7 @@
             <p class="taxes">{{ 'cart.general.shipping_at_checkout' | t }}</p>
           </div>
           <div>
+            
             <input class="cart-update" type="submit" name="update" value="{{ 'cart.general.update' | t }}">
             <input type="submit" name="checkout" class="btn" value="{{ 'cart.general.checkout' | t }}">
           </div>

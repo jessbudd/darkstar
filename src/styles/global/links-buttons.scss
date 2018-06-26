@@ -10,3 +10,16 @@
   white-space: nowrap;
   border: 0;
 }
+.btn.continue-shopping {
+  background-color: transparent;
+  border: 1px solid #bb9852;
+  padding: 11px;
+  color: #bb9852;
+  text-transform: uppercase;
+  position: absolute;
+  top: 28px;
+}
+
+.continue-shopping-wrapper {
+  position: relative;
+}

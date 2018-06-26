@@ -28,3 +28,19 @@ body.parallax .body {
   padding: 0 $gutter;
   margin: 0 auto;
 }
+hr {
+  width: 70%;
+}
+
+@media (max-width: 500px) {
+  .submenu {
+    display:none;
+  }
+}
+
+.stuck-nav {
+    position: fixed;
+    top: 76px;
+    z-index: 999;
+    width: 100%
+}

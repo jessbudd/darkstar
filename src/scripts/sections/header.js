@@ -55,6 +55,25 @@
     setMobileMenu(false);
   }
 
+  // When the user scrolls the page, execute fixSubmenu 
+  window.onscroll = function() {fixSubmenu()};
+
+  // Get the submenu
+  var header = document.getElementById("submenu");
+
+  // Get the offset position of the submenu
+  var sticky = header.offsetTop - 67;
+
+  function fixSubmenu() {
+    if (window.pageYOffset > sticky) {
+      // Add the sticky class to the header when you reach its scroll position. 
+      header.classList.add("stuck-nav");
+    } else {
+      // Remove "sticky" when you leave the scroll position
+      header.classList.remove("stuck-nav");
+    }
+  }
+
   $(function() {
     $(document).add('.body').scroll(checkHeaderShrink);
     $(window).resize(checkHeaderShrink);
