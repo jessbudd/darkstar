@@ -1,24 +1,10 @@
 <div class="home-banner">
   <div class="page-width">
-    <div class="bk" style="background-image: url({{ section.settings.bk | img_url: '2560x' }});">
+    <div class="bk {{ section.settings.text_align }}" style="background-image: url({{ section.settings.bk | img_url: '2560x' }});">
       <div>
-        <h2>Lorem ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit et ex in efficitur. In venenatis sagittis metus, in commodo augue lobortis id. Nunc massa metus.</p>
-        <a href="#" class="btn">Do something</a>
-      </div>
-    </div>
-    <div class="box-links">
-      <div class="link">
-        <h2>Item One</h2>
-        <a href="#"></a>
-      </div>
-      <div class="link">
-        <h2>Item Two</h2>
-        <a href="#"></a>
-      </div>
-      <div class="link">
-        <h2>Item Three</h2>
-        <a href="#"></a>
+        <h2>{{ section.settings.h2_1 }}</h2>
+        <p>{{ section.settings.subtitle_1 }}</p>
+        <a href="{{ section.settings.btn_url }}" class="btn">{{ section.settings.btn_text }}</a>
       </div>
     </div>
   </div>
@@ -28,6 +14,40 @@
   {
     "name": "Homepage banner",
     "settings": [
+            {
+        "type": "text",
+        "id": "h2_1",
+        "default": "Lorem Ipsum",
+        "label": "Main Headline"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle_1",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit et ex in efficitur. In venenatis sagittis metus, in commodo augue lobortis id. Nunc massa metus.",
+        "label": "Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "btn_text",
+        "default": "Learn More",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "btn_url",
+        "label": "URL for button link",
+        "default": "/collections/all"
+      },
+      {
+        "type": "radio",
+        "id": "text_align",
+        "options": [
+            { "value": "left", "label": "Left"},
+            { "value": "center", "label": "Center"},
+            { "value": "right", "label": "Right"}
+        ],
+        "label": "Text and button alignment"
+      },
       {
         "type": "image_picker",
         "id": "bk",

@@ -1,0 +1,64 @@
+
+  <div class="page-width">
+    <div class="box-links">
+      <div class="link" style="background-image: url({{ section.settings.img_1 }});">
+        <h2>Item One</h2>
+        <a href="{{ section.settings.img1_url }}"></a>
+      </div>
+      <div class="link" style="background-image: url({{ section.settings.img_2 }});">
+        <h2>Item Two</h2>
+        <a href="{{ section.settings.img1_url }}"></a>
+      </div>
+      <div class="link" style="background-image: url({{ section.settings.img_3 }});">
+        <h2>Item Three</h2>
+        <a href="{{ section.settings.img1_url }}"></a>
+      </div>
+    </div>
+  </div>
+
+{% schema %}
+  {
+    "name": "Homepage Image Trio",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "img_1",
+        "label": "Image One"
+      },
+      {
+        "type": "url",
+        "id": "img1_url",
+        "label": "URL Image One",
+        "default": "/collections/all"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_2",
+        "label": "Image Two"
+      },
+      {
+        "type": "url",
+        "id": "img2_url",
+        "label": "URL for Image Two",
+        "default": "/collections/all"
+      },
+      {
+        "type": "image_picker",
+        "id": "img_3",
+        "label": "Image Three"
+      },
+      {
+        "type": "url",
+        "id": "img3_url",
+        "label": "URL for Image Three",
+        "default": "/collections/all"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Homepage Image Trio",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
