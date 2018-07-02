@@ -1,10 +1,20 @@
+
+
 <div class="home-banner">
   <div class="page-width">
+
+    <ul class="rslides">
+			<li><img src="{{ 'slide_03.jpg' | asset_url }}" alt="{{ shop.name }}"></li>
+			<li><img src="{{ section.settings.bk  | img_url: '2560x' }}" alt="{{ shop.name }}"></li>
+			<li><img src="{{ 'slide_03.jpg' | asset_url }}" alt="{{ shop.name }}"></li>
+		</ul>
+
+
     <div class="bk {{ section.settings.text_align }}" style="background-image: url({{ section.settings.bk | img_url: '2560x' }});">
       <div>
-        <h2>{{ section.settings.h2_1 }}</h2>
-        <p>{{ section.settings.subtitle_1 }}</p>
-        <a href="{{ section.settings.btn_url }}" class="btn">{{ section.settings.btn_text }}</a>
+        <h2 style="color: {{ section.settings.text_color }}">{{ section.settings.h2_1 }}</h2>
+        <p style="color: {{ section.settings.text_color }}">{{ section.settings.subtitle_1 }}</p>
+        <a href="{{ section.settings.btn_url }}" class="btn" style="color: {{ section.settings.text_color }}; border-color: {{ section.settings.text_color }}">{{ section.settings.btn_text }}</a>
       </div>
     </div>
   </div>
@@ -47,6 +57,17 @@
             { "value": "right", "label": "Right"}
         ],
         "label": "Text and button alignment"
+      },
+      {
+        "type": "radio",
+        "id": "text_color",
+        "options": [
+            { "value": "#fffff", "label": "White"},
+            { "value": "#232323", "label": "Back"},
+            { "value": "#25395c", "label": "Brand Primary"},
+            { "value": "#bb9852", "label": "Brand Secondary"}
+        ],
+         "label": "Text color"
       },
       {
         "type": "image_picker",
