@@ -4,19 +4,30 @@
   <div class="page-width">
 
     <ul class="rslides">
-			<li><img src="{{ 'slide_03.jpg' | asset_url }}" alt="{{ shop.name }}"></li>
-			<li><img src="{{ section.settings.bk  | img_url: '2560x' }}" alt="{{ shop.name }}"></li>
-			<li><img src="{{ 'slide_03.jpg' | asset_url }}" alt="{{ shop.name }}"></li>
+			<li class="bk {{ section.settings.text_align }}" style="background-image: url({{ section.settings.bk | img_url: '2560x' }});">
+        {% comment %} <img src="{{ 'slide_03.jpg' | asset_url }}" alt="{{ shop.name }}"> {% endcomment %}
+        <div>
+        <h2 style="color: {{ section.settings.text_color }}">{{ section.settings.h2_1 }}</h2>
+        <p style="color: {{ section.settings.text_color }}">{{ section.settings.subtitle_1 }}</p>
+        <a href="{{ section.settings.btn_url }}" class="btn" style="color: {{ section.settings.text_color }}; border-color: {{ section.settings.text_color }}">{{ section.settings.btn_text }}</a>
+      </div>
+      {% comment %} </li>
+			<li>
+        <img src="{{ section.settings.bk  | img_url: '2560x' }}" alt="{{ shop.name }}">
+      </li>
+			<li>
+        <img src="{{ 'slide_03.jpg' | asset_url }}" alt="{{ shop.name }}">
+      </li> {% endcomment %}
 		</ul>
 
-
+{% comment %} 
     <div class="bk {{ section.settings.text_align }}" style="background-image: url({{ section.settings.bk | img_url: '2560x' }});">
       <div>
         <h2 style="color: {{ section.settings.text_color }}">{{ section.settings.h2_1 }}</h2>
         <p style="color: {{ section.settings.text_color }}">{{ section.settings.subtitle_1 }}</p>
         <a href="{{ section.settings.btn_url }}" class="btn" style="color: {{ section.settings.text_color }}; border-color: {{ section.settings.text_color }}">{{ section.settings.btn_text }}</a>
       </div>
-    </div>
+    </div> {% endcomment %}
   </div>
 </div>
 
@@ -28,19 +39,19 @@
         "type": "text",
         "id": "h2_1",
         "default": "Lorem Ipsum",
-        "label": "Main Headline"
+        "label": "Slide 1: Main Headline"
       },
       {
         "type": "textarea",
         "id": "subtitle_1",
         "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit et ex in efficitur. In venenatis sagittis metus, in commodo augue lobortis id. Nunc massa metus.",
-        "label": "Subtitle"
+        "label": "Slide 1: Subtitle"
       },
       {
         "type": "text",
         "id": "btn_text",
         "default": "Learn More",
-        "label": "Button text"
+        "label": "Slide 1: Button text"
       },
       {
         "type": "url",
@@ -56,7 +67,7 @@
             { "value": "center", "label": "Center"},
             { "value": "right", "label": "Right"}
         ],
-        "label": "Text and button alignment"
+        "label": "Slide 1: Text and button alignment"
       },
       {
         "type": "radio",
@@ -67,12 +78,12 @@
             { "value": "#25395c", "label": "Brand Primary"},
             { "value": "#bb9852", "label": "Brand Secondary"}
         ],
-         "label": "Text color"
+         "label": "Slide 1: Text color"
       },
       {
         "type": "image_picker",
         "id": "bk",
-        "label": "Background image"
+        "label": "Slide 1: Background image"
       }
     ],
     "presets": [
