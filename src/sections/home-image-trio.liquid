@@ -1,17 +1,23 @@
 
   <div class="page-width">
     <div class="box-links">
-      <div class="link" style="background-image: url({{ section.settings.img_1 }});">
-        <h2>Item One</h2>
-        <a href="{{ section.settings.img1_url }}"></a>
+      <div class="link">
+        <div class="link-img" style="background-image: url({{ section.settings.img_1  | img_url: '250x' }});">
+          <h2>{{ section.settings.h2_1 }}</h2>
+          <a href="{{ section.settings.img1_url }}"></a>
+        </div>
       </div>
-      <div class="link" style="background-image: url({{ section.settings.img_2 }});">
-        <h2>Item Two</h2>
-        <a href="{{ section.settings.img1_url }}"></a>
-      </div>
-      <div class="link" style="background-image: url({{ section.settings.img_3 }});">
-        <h2>Item Three</h2>
-        <a href="{{ section.settings.img1_url }}"></a>
+      <div class="link">
+        <div class="link-img" style="background-image: url({{ section.settings.img_2 | img_url: '250x' }});">
+            <h2>{{ section.settings.h2_2 }}</h2>
+            <a href="{{ section.settings.img2_url }}"></a>
+        </div>
+      </div> 
+      <div class="link">
+        <div class="link-img" style="background-image: url({{ section.settings.img_3 | img_url: '250x' }});">
+            <h2>{{ section.settings.h2_3 }}</h2>
+            <a href="{{ section.settings.img3_url }}"></a>
+        </div>
       </div>
     </div>
   </div>
@@ -25,6 +31,12 @@
         "id": "img_1",
         "label": "Image One"
       },
+       {
+        "type": "text",
+        "id": "h2_1",
+        "default": "Item One",
+        "label": "Item One Title"
+      },
       {
         "type": "url",
         "id": "img1_url",
@@ -36,6 +48,12 @@
         "id": "img_2",
         "label": "Image Two"
       },
+       {
+        "type": "text",
+        "id": "h2_2",
+        "default": "Item Two",
+        "label": "Item Two Title"
+      },
       {
         "type": "url",
         "id": "img2_url",
@@ -46,6 +64,12 @@
         "type": "image_picker",
         "id": "img_3",
         "label": "Image Three"
+      },
+       {
+        "type": "text",
+        "id": "h2_3",
+        "default": "Item Three",
+        "label": "Item Three Title"
       },
       {
         "type": "url",

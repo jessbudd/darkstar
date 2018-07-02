@@ -57,6 +57,10 @@
       }
     }
   }
+}
+
+
+.page-width {
 
   .box-links {
     $spacing: 16px;
@@ -66,17 +70,27 @@
     .link {
       position: relative;
       flex: 1 0 0;
-      padding: 7% 0;
-      background-color: #888;
       margin: 0 (0.5 * $spacing);
       border-radius: 3px;
       overflow: hidden;
+
+      .link-img {
+        background-color: #888;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 30% 0;
+        height: 100%;
+        width: 100%;
+        transition: all .5s;
+        }
 
       h2 {
         text-align: center;
         margin: 0;
         padding: 0;
         font-size: 24px;
+        color: #fff;
       }
 
       a {
@@ -112,58 +126,7 @@
   }
 }
 
-.page-width {
-
-  .box-links {
-    $spacing: 16px;
-    display: flex;
-    margin: $spacing (-0.5 * $spacing);
-
-    .link {
-      position: relative;
-      flex: 1 0 0;
-      padding: 7% 0;
-      background-color: #888;
-      margin: 0 (0.5 * $spacing);
-      border-radius: 3px;
-      overflow: hidden;
-
-      h2 {
-        text-align: center;
-        margin: 0;
-        padding: 0;
-        font-size: 24px;
-      }
-
-      a {
-        display: block;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transition: background-color 0.4s;
-
-        &:hover {
-          background-color: rgba(0, 0, 0, 0.3);
-        }
-      }
-    }
-
-    @media (max-width: 800px) {
-      .link h2 {
-        font-size: 20px;
-      }
-    }
-
-    @media (max-width: 700px) {
-      display: block;
-      margin: 0;
-
-      .link {
-        margin: $spacing 0;
-        padding: 50px 0;
-      }
-    }
-  }
+.link:hover .link-img,
+.link:focus .link-img {
+  transform: scale(1.2);
 }
