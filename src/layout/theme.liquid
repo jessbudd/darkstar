@@ -60,25 +60,31 @@
 
   <!--[if (gt IE 9)|!(IE)]><!--><script src="{{ 'theme.js' | asset_url }}" defer="defer"></script><!--<![endif]-->
   <!--[if lt IE 9]><script src="{{ 'theme.js' | asset_url }}"></script><![endif]-->
-  {{ 'responsiveslides.css'         | asset_url | stylesheet_tag }}
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-  {{ 'responsiveslides.min.js'     | asset_url | script_tag }}
-    <script>
-  jQuery(function($) {
-    $(".rslides").responsiveSlides( {
-        speed: 700,            // Integer: Speed of the transition, in milliseconds
-        timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
-        pager: false,           // Boolean: Show pager, true or false
-        nav: true,             // Boolean: Show navigation, true or false
-        random: false,          // Boolean: Randomize the order of the slides, true or false
-        pause: false,           // Boolean: Pause on hover, true or false
-        pauseControls: true,    // Boolean: Pause when hovering controls, true or false
-        prevText: "<",   // String: Text for the "previous" button
-        nextText: ">",       // String: Text for the "next" button
+  
+  {% if template.name == 'index' %}
+            
+    {{ 'responsiveslides.css'         | asset_url | stylesheet_tag }}
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    {{ 'responsiveslides.min.js'     | asset_url | script_tag }}
+     <script>
+    jQuery(function($) {
+      $(".rslides").responsiveSlides( {
+          speed: 700,            // Integer: Speed of the transition, in milliseconds
+          timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+          pager: false,           // Boolean: Show pager, true or false
+          nav: true,             // Boolean: Show navigation, true or false
+          random: false,          // Boolean: Randomize the order of the slides, true or false
+          pause: false,           // Boolean: Pause on hover, true or false
+          pauseControls: true,    // Boolean: Pause when hovering controls, true or false
+          prevText: "<",   // String: Text for the "previous" button
+          nextText: ">",       // String: Text for the "next" button
+          });
         });
-      });
-    </script>
+      </script>
     
+    {% endif %}
+      
+ 
 
   {{ content_for_header }}
 </head>
@@ -92,7 +98,9 @@
   <div class="body">
 
     <main role="main" id="MainContent">
+
       {{ content_for_layout }}
+      
     </main>
 
     {% section 'footer' %}

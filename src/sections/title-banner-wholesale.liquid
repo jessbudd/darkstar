@@ -1,0 +1,37 @@
+{% if section.settings.enable-bk-image %}
+
+<div class="subpage-banner" style="background-image: url({{ section.settings.bk | img_url: '2560x' }});">
+  <div class="page-width"><h1>{{ page_title }}</h1></div>
+</div>
+
+{% else %}
+<div class="subpage-banner" style="background-color: #25395c;">
+  <div class="page-width"><h1>{{ page_title }}</h1></div>
+</div>
+
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Title banner",
+    "settings": [
+      {
+    "id": "enable-bk-image",
+    "type": "checkbox",
+    "label": "Enable title Background Image",
+    "default": false
+  },
+  {
+        "type": "image_picker",
+        "id": "bk",
+        "label": "Background image"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Title banner",
+        "category": "Image"
+      }
+    ]
+  }
+{% endschema %}
