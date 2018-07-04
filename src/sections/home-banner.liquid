@@ -4,30 +4,29 @@
   <div class="page-width">
 
     <ul class="rslides">
-			<li class="bk {{ section.settings.text_align }}" style="background-image: url({{ section.settings.bk | img_url: '2560x' }});">
+			<li class="bk {{ section.settings.text_align1 }}" style="background-image: url({{ section.settings.bk1 | img_url: '2560x' }});">
         {% comment %} <img src="{{ 'slide_03.jpg' | asset_url }}" alt="{{ shop.name }}"> {% endcomment %}
         <div>
-        <h2 style="color: {{ section.settings.text_color }}">{{ section.settings.h2_1 }}</h2>
-        <p style="color: {{ section.settings.text_color }}">{{ section.settings.subtitle_1 }}</p>
-        <a href="{{ section.settings.btn_url }}" class="btn" style="color: {{ section.settings.text_color }}; border-color: {{ section.settings.text_color }}">{{ section.settings.btn_text }}</a>
-      </div>
-      {% comment %} </li>
-			<li>
-        <img src="{{ section.settings.bk  | img_url: '2560x' }}" alt="{{ shop.name }}">
+          <h2 style="color: {{ section.settings.text_color1 }}">{{ section.settings.h2_1 }}</h2>
+          <p style="color: {{ section.settings.text_color1 }}">{{ section.settings.subtitle_1 }}</p>
+          <a href="{{ section.settings.btn_url1 }}" class="btn" style="color: {{ section.settings.text_color1 }}; border-color: {{ section.settings.text_color1 }}">{{ section.settings.btn_text1 }}</a>
+        </div>
       </li>
-			<li>
-        <img src="{{ 'slide_03.jpg' | asset_url }}" alt="{{ shop.name }}">
-      </li> {% endcomment %}
+			<li class="bk {{ section.settings.text_align2 }}" style="background-image: url({{ section.settings.bk2 | img_url: '2560x' }});">
+          <div>
+          <h2 style="color: {{ section.settings.text_color2 }}">{{ section.settings.h2_2 }}</h2>
+          <p style="color: {{ section.settings.text_color2 }}">{{ section.settings.subtitle_2 }}</p>
+          <a href="{{ section.settings.btn_url2 }}" class="btn" style="color: {{ section.settings.text_color2 }}; border-color: {{ section.settings.text_color2 }}">{{ section.settings.btn_text2 }}</a>
+        </div>
+      </li>
+			<li class="bk {{ section.settings.text_align3 }}" style="background-image: url({{ section.settings.bk3 | img_url: '2560x' }});">
+          <div>
+            <h2 style="color: {{ section.settings.text_color3 }}">{{ section.settings.h2_3 }}</h2>
+            <p style="color: {{ section.settings.text_color3 }}">{{ section.settings.subtitle_3 }}</p>
+            <a href="{{ section.settings.btn_url3 }}" class="btn" style="color: {{ section.settings.text_color3 }}; border-color: {{ section.settings.text_color3 }}">{{ section.settings.btn_text3 }}</a>
+        </div>
+      </li>
 		</ul>
-
-{% comment %} 
-    <div class="bk {{ section.settings.text_align }}" style="background-image: url({{ section.settings.bk | img_url: '2560x' }});">
-      <div>
-        <h2 style="color: {{ section.settings.text_color }}">{{ section.settings.h2_1 }}</h2>
-        <p style="color: {{ section.settings.text_color }}">{{ section.settings.subtitle_1 }}</p>
-        <a href="{{ section.settings.btn_url }}" class="btn" style="color: {{ section.settings.text_color }}; border-color: {{ section.settings.text_color }}">{{ section.settings.btn_text }}</a>
-      </div>
-    </div> {% endcomment %}
   </div>
 </div>
 
@@ -35,7 +34,7 @@
   {
     "name": "Homepage banner",
     "settings": [
-            {
+      {
         "type": "text",
         "id": "h2_1",
         "default": "Lorem Ipsum",
@@ -49,19 +48,19 @@
       },
       {
         "type": "text",
-        "id": "btn_text",
+        "id": "btn_text1",
         "default": "Learn More",
         "label": "Slide 1: Button text"
       },
       {
         "type": "url",
-        "id": "btn_url",
-        "label": "URL for button link",
+        "id": "btn_url1",
+        "label": "Slide 1: Button link",
         "default": "/collections/all"
       },
       {
         "type": "radio",
-        "id": "text_align",
+        "id": "text_align1",
         "options": [
             { "value": "left", "label": "Left"},
             { "value": "center", "label": "Center"},
@@ -71,9 +70,9 @@
       },
       {
         "type": "radio",
-        "id": "text_color",
+        "id": "text_color1",
         "options": [
-            { "value": "#fffff", "label": "White"},
+            { "value": "#ffffff", "label": "White"},
             { "value": "#232323", "label": "Back"},
             { "value": "#25395c", "label": "Brand Primary"},
             { "value": "#bb9852", "label": "Brand Secondary"}
@@ -82,8 +81,108 @@
       },
       {
         "type": "image_picker",
-        "id": "bk",
+        "id": "bk1",
         "label": "Slide 1: Background image"
+      },
+      {
+        "type": "text",
+        "id": "h2_2",
+        "default": "Lorem Ipsum",
+        "label": "Slide 2: Main Headline"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle_2",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit et ex in efficitur. In venenatis sagittis metus, in commodo augue lobortis id. Nunc massa metus.",
+        "label": "Slide 2: Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "btn_text2",
+        "default": "Learn More",
+        "label": "Slide 2: Button text"
+      },
+      {
+        "type": "url",
+        "id": "btn_url2",
+        "label": "Slide 2: Button link",
+        "default": "/collections/all"
+      },
+      {
+        "type": "radio",
+        "id": "text_align2",
+        "options": [
+            { "value": "left", "label": "Left"},
+            { "value": "center", "label": "Center"},
+            { "value": "right", "label": "Right"}
+        ],
+        "label": "Slide 2: Text and button alignment"
+      },
+      {
+        "type": "radio",
+        "id": "text_color2",
+        "options": [
+            { "value": "#ffffff", "label": "White"},
+            { "value": "#232323", "label": "Back"},
+            { "value": "#25395c", "label": "Brand Primary"},
+            { "value": "#bb9852", "label": "Brand Secondary"}
+        ],
+         "label": "Slide 2: Text color"
+      },
+      {
+        "type": "image_picker",
+        "id": "bk2",
+        "label": "Slide 2: Background image"
+      },
+      {
+        "type": "text",
+        "id": "h2_3",
+        "default": "Lorem Ipsum",
+        "label": "Slide 3: Main Headline"
+      },
+      {
+        "type": "textarea",
+        "id": "subtitle_3",
+        "default": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque blandit et ex in efficitur. In venenatis sagittis metus, in commodo augue lobortis id. Nunc massa metus.",
+        "label": "Slide 3: Subtitle"
+      },
+      {
+        "type": "text",
+        "id": "btn_text3",
+        "default": "Learn More",
+        "label": "Slide 3: Button text"
+      },
+      {
+        "type": "url",
+        "id": "btn_url3",
+        "label": "Slide 3: Button link",
+        "default": "/collections/all"
+      },
+      {
+        "type": "radio",
+        "id": "text_align3",
+        "options": [
+            { "value": "left", "label": "Left"},
+            { "value": "center", "label": "Center"},
+            { "value": "right", "label": "Right"}
+        ],
+        "label": "Slide 3: Text and button alignment"
+      },
+      {
+        "type": "radio",
+        "id": "text_color3",
+        "options": [
+            { "value": "#ffffff", "label": "White"},
+            { "value": "#232323", "label": "Back"},
+            { "value": "#25395c", "label": "Brand Primary"},
+            { "value": "#bb9852", "label": "Brand Secondary"}
+        ],
+         "label": "Slide 3: Text color"
+      },
+      {
+        "type": "image_picker",
+        "id": "bk3",
+        "label": "Slide 3: Background image"
       }
     ],
     "presets": [

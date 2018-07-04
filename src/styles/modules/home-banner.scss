@@ -112,6 +112,7 @@
       .link h2 {
         font-size: 20px;
       }
+
     }
 
     @media (max-width: 700px) {
@@ -123,6 +124,12 @@
         padding: 50px 0;
       }
     }
+  }
+}
+
+@media (min-width: 800px) {
+  .home-banner .bk {
+    padding: 100px 60px;
   }
 }
 
